@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circular Menu</title>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+       <section class="titulo">
+            <span>P</span>
+            <span>R</span>
+            <span>O</span>
+            <span>Y</span>
+            <span>E <div class="div-letrabonita" lang="de">Daw</div></span>
+            <span>C</span>
+            <span>T</span>
+            <span>O</span>
+
+    </section>
+    <section class="section2">
+<div id="menu" onclick="toggleMenu(event)">
+    <span class="numero">1</span>
+
+    <div class="menuItem"><a href="./SinCSS/act2gaxiola gonzalez andrea marili4bpm/Datosdelplantel.html">Practica1 Html</a></div>
+    <div class="menuItem"><a href="./SinCSS/act3gaxiola gonzalez andrea marili4bpm/act3cancion.html">Practica2 Html</a></div>
+    <div class="menuItem" ><a href="./SinCSS/act4gaxiola gonzalez andrea marili4bpm/cuento.html">Practica3 Html</a></div>
+    <div class="menuItem"><a href="./SinCSS/act5gaxiola gonzalez andrea marili4bpm/receta.html">Practica4 Html</a></div>
+    <div class="menuItem"><a href="./SinCSS/act6gaxiola gonzalez andrea marili4bpm/history.html">Practica5 Html</a></div>
+    <div class="menuItem"><a href="./SinCSS/act7gaxiola gonzalez andrea marili4bpm/act7.html">Practica6 Html</a></div>
+    <div class="menuItem"><a href="./SinCSS/act8 gaxiola gonzalez andrea marili4bpm/act8.html">Practica7 Html</a></div>
+    <div class="menuItem"><a href="./SinCSS/act8 gaxiola gonzalez andrea marili4bpm/act8.html">Practica8 Html</a></div>
+    <div class="menuItem"><a href="./SinCSS/act9GaxiolaGonzalezAndreaMarili4BPM/act9.html">Practica9 Html</a></div>
+    <div class="menuItem"><a href="./SinCSS/act11GaxiolaGonzalezAndreaMarili4BPM/act11.html">Practica10 Html</a></div>
+</div>
+<div id="menu" onclick="toggleMenu(event)">
+    <span class="numero">2</span>
+    <div class="menuItem"><a href="./HTML/act2gaxiola gonzalez andrea marili4bpm/Datosdelplantel.html">Practica1 CSS</a></div>
+    <div class="menuItem"><a href="./HTML/act3gaxiola gonzalez andrea marili4bpm/act3cancion.html">Practica2 CSS</a></div>
+    <div class="menuItem"><a href="./HTML/act4gaxiola gonzalez andrea marili4bpm/cuento.html">Practica3 CSS</a></div>
+    <div class="menuItem"><a href="./HTML/act5gaxiola gonzalez andrea marili4bpm/receta.html">Practica4 CSS</a></div>
+    <div class="menuItem"><a href="./HTML/act6gaxiola gonzalez andrea marili4bpm/history.html">Practica5 CSS</a></div>
+    <div class="menuItem"><a href="./HTML/act7gaxiola gonzalez andrea marili4bpm/act7.html">Practica6 CSS</a></div>
+    <div class="menuItem"><a href="./HTML/act8 gaxiola gonzalez andrea marili4bpm/act8.html">Practica7 CSS</a></div>
+    <div class="menuItem"><a href="./HTML/act9GaxiolaGonzalezAndreaMarili4BPM/act9.html">Practica8 CSS</a></div>
+    <div class="menuItem"><a href="./HTML/act10GaxiolaGonzalezAndreaMarili4BPM/act10.html">Practica9 CSS</a></div>
+    <div class="menuItem"><a href="./HTML/act11GaxiolaGonzalezAndreaMarili4BPM/act11.html">Practica10 CSS</a></div>
+</div>
+<div id="menu" onclick="toggleMenu(event)">
+    <span class="numero">3</span>
+    <div class="menuItem">Ecologia</div>
+    <div class="menuItem">Fisica</div>
+    <div class="menuItem">Calculo Diferencial</div>
+    <div class="menuItem">Ingles</div>
+    <div class="menuItem"><a href="">Das</a></div>
+</div>
+</section>
+<script>
+    let menuOpen = false;
+
+    function toggleMenu(event) {
+        const menu = event.currentTarget;
+        const items = menu.querySelectorAll('.menuItem');
+
+        if (menuOpen) {
+            items.forEach((item, index) => {
+                item.style.opacity = '0';
+            });
+        } else {
+            items.forEach((item, index) => {
+                const angle = index * (Math.PI * 2) / items.length;
+                const x = Math.cos(angle) * 30; // El 50% del tamaño del menú
+                const y = Math.sin(angle) * 30;
+                item.style.transform = `translate(calc(-50% + ${x}vmin), calc(-50% + ${y}vmin))`;
+                item.style.opacity = '1';
+            });
+        }
+
+        menuOpen = !menuOpen;
+    }
+</script>
+</body>
+</html>

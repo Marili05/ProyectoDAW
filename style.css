@@ -1,0 +1,140 @@
+:root{
+    --colorMedioBlanco: #f3f3f3;
+    --colorAmarillobajo: #ffdd67;
+    --colorAmariilomedio: #ffcd38;
+    --colorGris: #4a4a4a;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section2 {
+    margin: 0;
+    height: 100vmin;
+    width: 100%;
+    display: flex;
+    gap: 170px;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu {
+    position: relative;
+    width: 25vmin; /* El menú tendrá un tamaño relativo al 50% del viewport más pequeño */
+    height: 25vmin;
+    border-radius: 50%;
+    background-color: #5fb1ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menuItem {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 15vmin;
+    height: 15vmin;
+    border-radius: 50%;
+    background-color: #ffcd38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+   
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.menuItem.active {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.menuItem:hover {
+    transform: scale(1.1);
+}
+/*seccion 1*/
+.titulo {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    font-size: clamp(3rem, -1.286rem + 11.429vw, 9rem);
+    height: 100vmin;
+    width: 100%;
+    line-height: 1.5; /* espaciado entre líneas */
+    background: url('./img/chicadisenando.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+}
+span{
+    margin: 25vh 0;
+}
+.titulo span {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+/* posición vertical de cada letra */
+.titulo span:nth-child(1) {
+    top: -15px; 
+}
+.titulo span:nth-child(2) {
+    top: 15px; 
+}
+.titulo span:nth-child(3) {
+    top: 14px; 
+}
+
+.titulo span:nth-child(5) {
+    top: -15px; 
+}
+
+.titulo span:nth-child(7) {
+    top: 15px; 
+}
+.titulo span:nth-child(6) {
+    top: 25px; 
+}
+.div-letrabonita{
+    background: rgb(255,205,56);
+background: linear-gradient(90deg, rgba(255,205,56,1) 15%, rgba(95,177,255,1) 100%);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: initial;
+    font-weight: bold;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.div-letrabonita:lang(de) {
+    display: block;
+}
+
+.numero{
+    font-size: clamp(2.5rem, 0rem + 6.667vw, 6rem);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menuItem{
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.menuItem:hover{
+    transition: all 0.5s;
+    background: #5fb1ff;
+}
